@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Um Pouco de CSS</title>
+        <link rel="stylesheet" href="poucoDeCSS.css">
+        <!-- color: red = #ff0000 = #f00 = rgb(255, 0, 0) -->
+        <style>
+            
+            h1 {
+                color: whitesmoke;
+                background-color: rebeccapurple;
+                font-size: 32px;
+                padding: 100px;
+                text-align: center;
+            }
+
+            .fundoVermelho {
+                background-color: #A00; 
+            }
+
+            .negrito {
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- (.) para classes e (#) para id's -->
+        <h1>CSS</h1>
+        <span id="textoPrincipal">Texto 1</span><br>
+        <span style="display: none;">Não recomendado</span>
+        <span class="fundoVermelho negrito">Texto 2</span><br>
+        <!-- web-atrib = elemento como atributo -->
+        <!-- No console: document.querySelector('[web-atrib]') -->
+        <span class="fundoVermelho" web-atrib>Texto 3</span>
+    </body>
+</html>
