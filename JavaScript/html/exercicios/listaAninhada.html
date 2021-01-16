@@ -2,10 +2,10 @@
 <!-- <ul> : Para não ter o CSS -->
 <ul class="tree">
     <li>
-        backend
+        <span web-folder>backend</span>
         <ul>
             <li>
-                app
+                <span web-folder>app</span>
                 <ul>
                     <li>produto.js</li>
                     <li>usuario.js</li>
@@ -13,7 +13,7 @@
                 </ul>
             </li>
             <li>
-                config
+                <span web-folder>config</span>
                 <ul>
                     <li>banco.js</li>
                     <li>rotas.js</li>
@@ -23,10 +23,10 @@
         </ul>
     </li>
     <li>
-        frontend
+        <span web-folder>frontend</span>
         <ul>
             <li>
-                public
+                <span web-folder>public</span>
                 <ul>
                     <li>app.css</li>
                     <li>app.js</li>
@@ -39,5 +39,11 @@
 
 <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
 <script>
-    // console.log('arvore...')
+    document.querySelectorAll('[web-folder]').forEach(folder => {
+            folder.onclick = function(e) {
+                const ul = folder.nextElementSibling
+                const display = ul.style.display
+                ul.style.display = display === 'none' ? 'block' : 'none'
+            }
+        })
 </script>
