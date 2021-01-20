@@ -6,7 +6,132 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+    /* Todos os elementos */
+
+        /* * {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* Todos os elementos de classe 'tag' */
+        
+        /* .tag {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* Todos os elementos de id 'aprovados' */
+
+        /* #aprovados {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* Todos os elementos de id 'aninhado' */
+
+        /* #aninhado {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* A div que se encontra como primeira filha de um elemento de id 'aninhado' */
+
+        /* #aninhado > div {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* A section que se encontra como primeira filha de um elemento de id 'aninhado' */
+
+        /* #aninhado > section {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* A div que se encontra como filha ou descendente de um elemento de id 'aninhado' */
+             
+        /* #aninhado section {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* A ul que se encontra como irmã seguinte do elemento p */
+
+        /* p + ul {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* A ol que se encontra como irmã seguinte do elemento p */
+
+        /* p + ol {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* A ul que se encontra como irmã posterior, não necessariamente seguinte, do elemento p */
+
+        /* p ~ ol {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* Elementos com a propriedade 'feira' */
+
+        /* [feira] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* Elementos com a propriedade 'feira' e propriedade 'escritorio' (atenção ao 'escritorio empresa') */
+
+        /* [feira=escritorio] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* Elementos com a propriedade 'feira' e contem a propriedade 'escritorio' */
+
+        /* [feira~=escritorio] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* Elementos com a propriedade 'feira' e contem a substring 'sa' na propriedade */
+
+        /* [feira*=sa] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+    
+    /* Elemento 'span' que seja o primeiro filho de alguém (necessário colocar o 'nolabel' no section para esse exemplo ) */
+
+        /* span:nth-child(1) {
+                color: #ff0;
+                background-color: #f77;
+            } */
+
+    /* Todos os filhos impares de uma 'section' (necessário colocar o 'nolabel' no section para esse exemplo ) */
+
+        /* section > :nth-child(odd) {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* Todos os filhos impares de uma 'section' e os ul (necessário colocar o 'nolabel' no section para esse exemplo ) */
+
+        /* section > :nth-child(odd), ul {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+    /* O segundo elemento do tipo 'span' que está dentro de uma section */
+
+        section > span:nth-of-type(2) {
+            color: #ff0;
+            background-color: #f77;
+        }
+
     </style>
 </head>
 
@@ -29,7 +154,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
