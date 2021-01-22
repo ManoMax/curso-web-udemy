@@ -5,7 +5,33 @@
     <meta charset="UTF-8">
     <title>Display</title>
     <style>
-        /* ... */
+        body {
+            font-size: 40px;
+            color: #fff;
+            background-color: coral;
+        }
+
+        ul { padding: 0; }
+        div { background-color: seagreen; }
+        span { background-color: dodgerblue; }
+        li { background-color: purple; }
+
+        div, span, li {
+            width: 50%; /* unidade relativa */
+            width: 200px; /* unidade absoluta */
+            height: 80px;
+            padding-top: 30px;
+            text-align: center;
+            /* No caso abaixo, a largura e altura são consideradas */
+            display: block; /* cada elemento na sua linha */
+
+            /* No caso abaixo, a largura e altura são desconsideradas */
+            display: inline; /* elementos na mesma linha */
+            
+            /* No caso abaixo, a largura e altura são consideradas */
+            display: inline-block; /* elementos na mesma linha */
+
+        }
     </style>
 </head>
 
