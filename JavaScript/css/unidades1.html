@@ -5,7 +5,31 @@
     <meta charset="UTF-8">
     <title>Unidades #01</title>
     <style>
-        /* ... */
+        .unidades-absolutas {
+            /* Apenas para deixar o posicionamento da div de forma absoluta na tela: */
+            position: absolute;
+            font-size: 40px;
+            padding: 20px;
+            border: solid 5px #222;
+            margin: 30px;
+            width: 4cm; /* pouco usado */
+            height: 20mm; /* pouco usado */
+            top: 150px; /* distância do topo da página */
+            left: 200px; /* distância do lado esquerdo da página */
+            /* Os dois acima só foram considerados devido a posição absoluta */
+            /* Mas isso não tem a ver com as unidades absolutas */
+        }
+
+        .unidades-relativas {
+            position: absolute;
+            font-size: 4em; /* 4x o tamanho normal da fonte do navegador */
+            padding: 5%;
+            border: solid 1vw #222;
+            margin: 20vw;
+            height: 15vh;
+            bottom: 5%;
+            right: 5%;
+        }
     </style>
 </head>
 
