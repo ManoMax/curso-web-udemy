@@ -12,6 +12,20 @@
             border: solid 5px;
             display: none;
         }
+
+        @media (max-width: 600px) {
+            .muito-pequeno { display: block; }
+        }
+
+        /* landscape = paisagem | portrait = retrato */
+        /* Critério 1 ou Critério 2 */
+        @media (max-width: 1000px), (orientation: portrait) {
+            .pequeno-retrato { display: block; }
+        }
+
+        @media (min-width: 700px) and (max-width: 1100px) {
+            .intervalo { display: block; }
+        }
     </style>
 </head>
 <body>
