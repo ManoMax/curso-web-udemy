@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/desafioMenuMax.css">
+    <!-- <style>
+        
+    </style> -->
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
+            </a>
+        </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li id="inicio">
+                    <a href="#inicio" class="letras">Início</a>
+                </li>
+                <li id="cursos">
+                    <a href="#cursos" class="letras">Cursos</a>
+                </li>
+                <li id="sobre">
+                    <a href="#sobre" class="letras">Sobre</a>
+                </li>
+                <li id="contato">
+                    <a href="#contato" class="letras">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login" class="letras">Login</a>
+            <a href="#registar" class="botao destaque letras">Registrar</a>
+        </aside>
+    </header>
+
+    <script>
+        const selecionar = element => {
+            element.style.backgroundColor = '#4faddb';
+            element.style.borderRadius = '0.1em';
+            var filho = element.children[0]
+            filho.style.color = 'black';
+        }
+        const padronizar = element => {
+            element.style.backgroundColor = '#333'; 
+            var filho = element.children[0]
+            filho.style.color = 'white';
+        }
+    
+    function rotas() {
+        switch (window.location.hash) {
+            case "":
+                document.querySelectorAll('li').forEach(li => {
+                    padronizar(li);
+                })
+                break;
+            case "#inicio":
+                document.querySelectorAll('li').forEach(li => {
+                    padronizar(li);
+                })
+                selecionar(document.getElementById('inicio'))
+                break;
+            case "#cursos":
+                document.querySelectorAll('li').forEach(li => {
+                    padronizar(li);
+                })
+                selecionar(document.getElementById('cursos'))
+                break;
+            case "#sobre":
+                document.querySelectorAll('li').forEach(li => {
+                    padronizar(li);
+                })
+                selecionar(document.getElementById('sobre'))
+                break;
+            case "#contato":
+                document.querySelectorAll('li').forEach(li => {
+                    padronizar(li);
+                })
+                selecionar(document.getElementById('contato'))
+                break;
+            }
+        }
+
+        rotas();
+        window.onhashchange = rotas
+    </script>
+</body>
+
+</html>
