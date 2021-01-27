@@ -5,7 +5,114 @@
     <meta charset="UTF-8">
     <title>Desafio Card</title>
     <style>
-        /* ... */
+        
+        /* Minha solução não deu certo */
+
+        /* body {
+            margin: 0;
+        }
+
+        .curso {
+            display: inline-block;
+            margin: 18px;
+            height: 350px;
+            width: 270px;
+            border: solid 0.1px #ccc;
+            box-shadow: 0 0 10px gray;
+        }
+
+        .curso img {
+            display: block;
+            margin: 5px 5px 0px 5px;
+            height: 140px;
+            width: 260px;
+        }
+
+        .curso-info {
+            display: block;
+            font-family: sans-serif;
+        }
+
+        .curso-info h4 {
+            display: inline-block;
+            margin: 10px 0px 0px 15px;
+            padding: 0px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .curso-info p {
+            display: inline-block;
+            margin: 18px 0px 0px 15px;
+            font-weight: bold;
+        }
+
+        .curso-preco {
+            display: block;
+        }
+
+        .preco-de {
+            font-weight: bold;
+            margin: 65px 2px 2px 100px;
+            color: rgb(179, 54, 54);
+            text-decoration: line-through;
+            font-size: 18px;
+        }
+
+        .preco-por {
+            font-weight: bold;
+            margin: 65px 15px 2px 2px;
+            color: green;
+            font-size: 25px;
+            float: right;
+        } */
+
+        .curso {
+            float: left; /* Outra opção é 'display: inline-block' */
+            /* Caso a imagem não esteja presente: */
+                /* vertical-align: top; */
+            font-family: Verdana, sans-serif;
+            border: solid 1px #ccc;
+            box-shadow: 0px 4px 20px 0 rgba(0, 0, 0, 0.3);
+            height: 300px;
+            width: 260px;
+            margin: 5px 20px;
+            padding: 5px;
+        }
+
+        .curso img {
+            width: 100%;
+            max-height: 50%;
+        }
+
+        .curso-info {
+            padding: 10px;
+            height: 90px;
+            overflow: hidden;
+        }
+        
+        .curso-info h4 {
+            font-size: 1.4em;
+            font-weight: 100;
+            margin: 0px;
+        }
+
+        .curso-preco {
+            float: right;
+            padding: 10px;
+        }
+
+        .preco-de {
+            text-decoration: line-through;
+            color: firebrick;
+        }
+
+        .preco-por {
+            color: green;
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+        
     </style>
 </head>
 
