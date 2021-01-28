@@ -4,9 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Flexbox #02</title>
-    <link rel="stylesheet" href="css/tag.css">
+    <!-- <link rel="stylesheet" href="css/tag.css"> -->
     <style>
-        /* ... */
+        div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+
+        .flex-container div:nth-child(3) {
+            background-color: indianred;
+            order: 1; /* Por padrão, os elementos vem como order = 0 */
+            order: 0;
+            order: -1; /* Quanto menor, primeiro ele será ordenado */
+            align-self: center;
+            align-self: flex-end;
+            align-self: flex-start;
+            align-self: stretch; /* Default */
+        }
+
+        .flex-container div {
+            width: 100px;
+            flex-grow: 1; /* Preenche o espaço que está sobrando, aumentando o espaço dos elementos de dentro */
+        }
+
+        .flex-container div:nth-child(1) {
+            flex-grow: 2; /* Vai aumentar bem mais que os outros elementos */
+        }
+
+        .flex-container {
+            width: 300px;
+            flex-shrink: 1; /* Preenche o espaço que está faltando, diminuindo o espaço dos elementos de dentro */
+        }
+
+        .flex-container div:nth-child(1) {
+            flex-shrink: 5; /* Vai encolher bem mais que os outros elementos */
+        }
     </style>
 </head>
 
