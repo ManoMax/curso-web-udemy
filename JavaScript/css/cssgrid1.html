@@ -22,6 +22,58 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid;
+            /* 2 colunas, com 50% cada */
+            grid-template-columns: 50% 50%;
+            /* 3 colunas, com 8.33% cada, multiplicado por 4 */
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);
+            /* 1 coluna, com 8.33%, multiplicado por 4 */
+            grid-template-columns: repeat(4, 8.33%);
+            /* 1 coluna, com 8.33%, multiplicado por 12 */
+            grid-template-columns: repeat(12, 8.33%);
+            /* colunas de 100px, 11 vezes, + uma outra coluna de 100px */
+            grid-template-columns: repeat(11, 100px) 100px;
+            /* minmax(100px, 300px) */
+            /* 3 colunas: 1ª = 200px ; 2ª = 20% ; 3ª = o restante */
+            grid-template-columns: 200px 20% 1fr;
+            grid-template-columns: 3fr 6fr 3fr;
+            grid-template-rows: 50% 25% 12.5% 12.5%;
+            /* 1ª = 100px ; 2ª = máximo de pôde ; restante = tamanho dos elementos restantes */
+            grid-template-rows: 100px 1fr;
+            /* Pega as 3 linhas restantes e divide de modo igualitário */
+            grid-template-rows: 100px auto;
+            grid-template-rows: 100px auto auto;
+            /* Definindo o tamanho de todas linhas da grid */
+            grid-template-rows: 100px auto auto auto;
+        }
+
+        .d8 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            /* comece da linha atual e vá mais 2 linhas para o lado */
+            grid-column-end: span 2;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
+        .d10, .d11 {
+            /* Podem se sobrepor */
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: span 1;
+        }
+
+        .d10 {
+            /* tornando o 10 superior ao 11 */
+            z-index: 10;
+            z-index: 1;
+            z-index: 0;
+            /* tornando o 10 inferior ao 11 */
+            z-index: -1;
+        }
     </style>
 </head>
 
