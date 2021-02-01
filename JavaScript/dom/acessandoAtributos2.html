@@ -10,6 +10,7 @@
 <body class='conteudo exercicio'>
     <div>
         <label for="compras">Compras</label>
+        <!-- Atributos iniciados com "data-" possuem uma pequena diferença de tratamento -->
         <ul id="compras" destino='escritório' data-urgencia="5">
             <li>Café</li>
             <li>Água</li>
@@ -17,7 +18,30 @@
         </ul>
     </div>
     <script>
-        // ...
+        const lista = document.querySelector('div ul[destino="escritório"]')
+        // const lista = document.querySelector('#compras')
+        console.log('Elemento "ul"...')
+        console.log('childNodes', lista.childNodes)
+        console.log('destino', lista.id)
+        console.log('destino', lista.destino)
+        console.log('destino', lista.getAttribute('destino'))
+        console.log('hasAttribute', lista.hasAttribute('destino'))
+        lista.setAttribute('destino', 'empresa') // Alterando um atributo
+        lista.setAttribute('status', 'aberto') // Adicionando um atributo
+        lista.removeAttribute('destino')
+        // Atributos iniciados com "data-"
+        console.log(lista.dataset)
+        console.log(lista.dataset.urgencia)
+        lista.dataset.urgencia = 4
+        console.log(lista.dataset.urgencia)
+        console.log(lista.getAttribute('data-urgencia'))
+
+        // Cuidado
+        const label = document.querySelector('label')
+        console.log(label.for)
+        console.log(label.htmlFor)
+        console.log(label.getAttribute('for'))
+        console.log(label.getAttribute('htmlFor'))
     </script>
 </body>
 
