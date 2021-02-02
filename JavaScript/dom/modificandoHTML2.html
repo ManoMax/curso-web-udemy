@@ -12,8 +12,18 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
-    </script>
+        const div = document.querySelector('div')
+        div.innerHTML = 'Texto Alterado'
+        // div.outerHTML = 'Texto Alterado' // Substitui o Elemento por um texto
+        div.insertAdjacentHTML('beforebegin', '<p>Antes do Início</p>')
+        div.insertAdjacentHTML('afterbegin', '<p>Depois do Início</p>')
+        div.insertAdjacentHTML('beforeend', '<p>Antes do Fim</p>')
+        div.insertAdjacentHTML('afterend', '<p>Depois do Fim</p>')
+
+        // Somente texto (sem tags)
+        console.log(div.innerHTML)
+        console.log(div.innerText)
+</script>
 </body>
 
 </html>
