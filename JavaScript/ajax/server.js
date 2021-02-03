@@ -29,4 +29,13 @@ app.post('/upload', (req, res) => {
     })
 })
 
+// Necessário ter um body-parser, para receber arquivos JSON
+app.post('/formulario', (req, res) => {
+    res.send({
+        // Tudo que veio no body
+        ...req.body,
+        id: 1
+    })
+})
+
 app.listen(8080, () => console.log('Executando...'))
