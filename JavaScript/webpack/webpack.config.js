@@ -39,7 +39,10 @@ module.exports = {
                 // 'style-loader', // Adiciona CSS a DOM injetando a tag <style>
                 'css-loader', // interpreta @import, url()...
                 'sass-loader'
-            ]
+            ], 
+        }, {
+            test: /\.(png|svg|jpg|gif)$/,
+            use: ['file-loader']
         }]
     }
 }
