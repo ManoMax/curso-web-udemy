@@ -49,6 +49,26 @@
     </form>
 
     <script>
-        // ...
+        $('#feira').addClass('destaque').removeClass('destaque')
+        $('li').addClass('destaque')
+        $('[wm-obrigatorio]').removeClass('destaque')
+        $('li.opcional').removeClass('destaque')
+        $('div p span').addClass('destaque')
+
+        // Exclusivos jQuery
+        $('li:first').css('border', 'solid 3px yellow')
+        // Impares = indice 1 e 3
+        $('li:odd').css('border', 'solid 10px orange')
+        // A partir do indice 1
+        $('li:gt(1)').css('border', 'solid 10px white')
+        $('li:not(:last)').css('border', 'none')
+        $('li:contains("r")').css('background-color', 'black')
+
+        $('form *').hide()
+        $('form :text').show(1000)
+        $('form :password').show(2000)
+        $('form :checkbox').show(3000)
+        $('form :radio').show(4000)
+        $('form :file').show(5000)
     </script>
 </body>

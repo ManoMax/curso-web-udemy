@@ -14,6 +14,21 @@
     <div>2</div>
 
     <script>
-        // ...
+        // jQuery é referenciado com $
+        console.log(jQuery === $)
+        $('div').hide(5000).show(5000).fadeOut(5000)
+        // O .get() pega realmente um elemento da DOM
+        // $div é outro tipo de obj que carrega várias func
+        console.log($('div').get(0))
+        console.log($.isEmptyObject({}))
+        console.log($.isEmptyObject({nome: null}))
+        console.log(jQuery.inArray(3, [1, 2, 3]))
+
+        $.fn.fundoVerde = function () {
+            this.css('background-color', 'green')
+            return this
+        }
+
+        $('body').fundoVerde().fadeOut(5000).show(5000)
     </script>
 </body>
