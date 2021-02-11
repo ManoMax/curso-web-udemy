@@ -22,7 +22,47 @@
 <body class='conteudo exercicio'>
     <h1>Manipulando Atributos</h1>
     <div wm-relogio='1000'></div>
+    <div wm-relogio='1000'></div>
     <script>
-        // ...
+        function Relogio(elemento) {
+            const horaCerta = $('<p>')
+            const botaoMenos = $('<button>').html('-')
+            const botaoMais = $('<button>').html('+')
+
+            const $elemento = $(elemento)
+            $elemento.append(horaCerta, botaoMenos, botaoMais)
+
+            const getIntervaloAtual = 
+                () => parseInt($elemento.attr('wm-relogio'))
+
+            let temporizador = null
+            const iniciar = () => {
+                if (temporizador) clearInterval(temporizador)
+                temporizador = setInterval(() => {
+                    horaCerta.html(new Date().toLocaleString('pt-BR'))
+                }, getIntervaloAtual())
+            }
+
+            const alterarIntervalor = delta => {
+                const novo = Math.max(getIntervaloAtual() + delta, 1000)
+                $elemento.attr('wm-relogio', novo)
+                iniciar()
+            }
+
+            botaoMais.click(e => alterarIntervalor(1000))
+            botaoMenos.click(e => alterarIntervalor(-1000))
+
+            iniciar()
+        }
+
+        $('[wm-relogio]').each((i, e) => new Relogio(e))
+
+        // Lendo um atributo
+        $('[wm-relogio]').attr('opa')
+        // Alterando ou incluindo novos atributos
+        $('[wm-relogio]').attr('opa', 3)
+        $('[wm-relogio]').attr({ opa: 1, novo: true})
+        $('[wm-relogio]').removeAttr('opa').removeAttr('novo')
+
     </script>
 </body>
